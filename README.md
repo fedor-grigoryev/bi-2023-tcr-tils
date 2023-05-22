@@ -106,8 +106,8 @@ Query to VDJdb has revealed specificity of some TCRs to epitopes of common patho
 
 
 
-
-## Colclusion 
+lse
+## Conclusion 
 In this project I have explored the possibilities of paired RNAseq+TCRseq on a public dataset of matched tumor and normal tissues in resectable non-small cell lung cancer.  
 
 * The T-cells were clustered and annotated into subgroups.
