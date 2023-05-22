@@ -84,26 +84,26 @@ We observe that CD8+ cell clones are highly more expanded than CD4+. That illust
 ![Fraction of cells with matched TCR by patient](figs/TCR_frac_pat.svg)
 ![UMAP for matched TCRs](figs/UMAP_matched_TCR.svg)
 
-Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens ('InfluenzaA', 'SARS-CoV-2', 'M.tuberculosis') was 1.4 fold higher in normal subset.
+Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was 1.4 fold higher in normal subset.
 
 We evaluated the clonal expansion of TILs and TCR diversity: the proportion of expanded CD8 cell clonotypes was higher in tumor cells, while expanded CD4 clonotypes dominate in normal cells. 
 
 
+Tumor and Normal samples do not share clonal compositions.
 
+![Cell type composition across 10 most populated clonotypes in Tumor and Normal](figs/celltype_clonotypes.svg)
 
+## Clonotype networks
 
+Construction of a clonotype network by computing distances between CDR3 sequences reveals a set of public clonotypes - clonotype clusters shared by all of the patients, illustrating possible specificity to a common pathogen (the clonotype network has been defined through amino acid alignment with distance based on BLOSUM62 matrix. Two clonotypes were connected in the network with distance of their  CDR3 lower than 10). The query to VDJdb  (Shugay M., et al. 2018) has shown that TCRs from one of public clonotype networks (`1238`) were indeed specific for antigens from single pathogenic species - CMV. 
 
+ ![Clonotype networks](figs/clonotype_net.svg)
+ 
+ ## Epitope specificity
+ 
+Query to VDJdb has revealed specificity of some TCRs to epitopes of common pathogens. However, as the neoantigens are tumor specific, it is impossible to mine TCR specificity from public databases. In fact, exploring transcriptional programs of MANA specific cells would be of greatest interest. 
 
-
-
-
-
-
-
-
-
-
-
+![Map by TCR sequence specificity to corresponding pathogenic species queried from VDJdb](figs/VDJdb_map.svg)
 
 
 
