@@ -55,7 +55,7 @@ Leiden clustering resulted in 14 separate clusters, that were annotated using co
 ![UMAP of clustering results](figs/umap_clustering.svg)
 ![Cell subtype marker expression](figs/clustering_markers.svg)
 
-Differentially expressed genes were found using wilcoxon test for each cell type vs all other cells
+Differentially expressed genes were found using wilcoxon test for each cell type vs all other cells. Compared to the original article, we obtained a bit fewer clusters, namely original publication clusterised CD4+ helpers deeper. Other results are comparable with original publication.
  
 
 ![Dotplot of cell markers, differentially expressed genes and T cell checkpoint associated genes](figs/dotplot.svg)
