@@ -20,12 +20,52 @@ The notebook with the full analysis can be found in this repo. Here I present an
 
 Low-quality cells were filtered out if:
 
-> the number of detected genes was below 250 or above 2500
+* the number of detected genes was below 250 or above 2500
 * the proportion of mitochondrial gene counts was higher than 10%
 * the proportion of ribosomal gene counts was lower than 10%
 
-doublets were removed with with the help of Scrublet 
+Doublets were removed with with the help of `Scrublet`
 
 Mitochondrial genes, and genes associated with poorly supported transcriptional patterns were also removed from the analysis
+
+### Clustering and annotation
+
+TCR, immunoglobulin and mitochondrial genes, as well as features that constitute Interferon I mediated pathway,  were excluded from clustering  to make sure that clustering result will not be influenced by their variability.
+
+PCA was performed based on the 3,000 most variable genes. UMAP on PCA results have shown that cells group by samples of their origin, indicating the need for a batch effect correction. 
+
+![UMAP of expression data before batch correction](figs/umap_before_harmony.svg)
+
+After harmonization, cell clusters are more evenly distributed among patients, however, the biological difference of the tumor/normal immune environment is not lost
+
+![UMAP of expression data after batch correction](figs/umap_after_harmony.svg)
+
+Leiden clustering resulted in 14 separate clusters, that were annotated using combination of general CD4/CD8 markers with common subset specific markers:
+
+* *FOXP3* for Tregs; 
+* *MKI67* for proliferating cells;  
+* *CXCL13* for Follicular helpers; 
+* *GZMA*, *GZMB*, *GZMK* for effector cells; 
+* *ZNF683* and *ITGAE* for memory cells; 
+* *KLRC1* for NK cells; 
+* *SLC4A10* for MAIT cells
+
+![UMAP of clustering results](figs/umap_clustering.svg)
+![Cell subtype marker expression](figs/clustering_markers.svg)
+
+Differentially expressed genes were found using wilcoxon test for each cell type vs all other cells
+ 
+
+![Dotplot of cell markers, differentially expressed genes and T cell checkpoint associated genes](figs/dotplot.svg)
+
+
+As expected, cellular distribution in tumor and normal sample is highly different. 
+
+* CD8+ effector2 cells are enriched in Tumor, while  CD8+ effector1 – in Normal tissue
+* Both CD4+ helper subtypes are enriched in Normal, although  CD4+ Follicular helpers and CD4+ T reg are more specific for Tumor
+* CD8+ mem1 is enriched in Tumor
+
+
+![Cell type composition by type of tissue](figs/clustering_by_tissue.svg)
 
 
