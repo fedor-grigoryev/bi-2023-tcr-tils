@@ -13,7 +13,7 @@ Our project is based on open data from the article [“Transcriptional programs 
 
 The notebook with the full analysis can be found in this repo. Here I present and summarize the main results of the work. A short recap can also be found in the presentation. 
 
-![Pipeline of analysis](figs/pipeline.svg)
+![Pipeline of analysis](figs/pipeline.png)
 
 The data was obtained from GEO (GSE173351) and contains Cell Ranger (v3.1.0) output - digital gene expression matrix and TCR data for each sample. Quality control, clustering, and annotation single-cell sequencing data were performed using the Scanpy package (v.1.9.1) for Python (v.3.8.11) (Wolf F. A., et al., 2018) and Seurat package (v.4.3.0) for R (v.4.2.3) (Hao Y., et al., 2022). For working with TCR data, Scirpy package (v.0.12.0) for Python (Sturm G., et al. 2020) was used. We querried VDJdb for TCR specificity
 
@@ -36,11 +36,11 @@ TCR, immunoglobulin and mitochondrial genes, as well as features that constitute
 
 PCA was performed based on the 3,000 most variable genes. UMAP on PCA results have shown that cells group by samples of their origin, indicating the need for a batch effect correction. 
 
-![UMAP of expression data before batch correction](figs/umap_before_harmony.svg)
+![UMAP of expression data before batch correction](figs/umap_before_harmony.png)
 
 After harmonization, cell clusters are more evenly distributed among patients, however, the biological difference of the tumor/normal immune environment is not lost
 
-![UMAP of expression data after batch correction](figs/umap_after_harmony.svg)
+![UMAP of expression data after batch correction](figs/umap_after_harmony.png)
 
 Leiden clustering resulted in 14 separate clusters, that were annotated using combination of general CD4/CD8 markers with common subset specific markers:
 
@@ -52,13 +52,13 @@ Leiden clustering resulted in 14 separate clusters, that were annotated using co
 * *KLRC1* for NK cells; 
 * *SLC4A10* for MAIT cells
 
-![UMAP of clustering results](figs/umap_clustering.svg)
-![Cell subtype marker expression](figs/clustering_markers.svg)
+![UMAP of clustering results](figs/umap_clustering.png)
+![Cell subtype marker expression](figs/clustering_markers.png)
 
 Differentially expressed genes were found using wilcoxon test for each cell type vs all other cells. Compared to the original article, we obtained a bit fewer clusters, namely original publication clusterised CD4+ helpers deeper. Other results are comparable with original publication.
  
 
-![Dotplot of cell markers, differentially expressed genes and T cell checkpoint associated genes](figs/dotplot.svg)
+![Dotplot of cell markers, differentially expressed genes and T cell checkpoint associated genes](figs/dotplot.png)
 
 
 As expected, cellular distribution in tumor and normal sample is highly different:
@@ -68,15 +68,15 @@ As expected, cellular distribution in tumor and normal sample is highly differen
 * CD8+ mem1 is enriched in Tumor
 
 
-![Cell type composition by type of tissue](figs/clustering_by_tissue.svg)
+![Cell type composition by type of tissue](figs/clustering_by_tissue.png)
 
 ## TCR seq integration
 
 The single cell sequencing data is combined to TCR seq by cell barcode. The paired sequencing is done separately on two subsets of cells and that results in some ammount of cellular dropouts -- not all barcoded cells have a matched sequenced TCR. Here we assess the proportion of succesfully matched cells, which was high enough for all of the samples.
 
-![Fraction of cells with matched TCR by sample](figs/TCR_frac_sample.svg)
-![Fraction of cells with matched TCR by patient](figs/TCR_frac_pat.svg)
-![UMAP for matched TCRs](figs/UMAP_matched_TCR.svg)
+![Fraction of cells with matched TCR by sample](figs/TCR_frac_sample.png)
+![Fraction of cells with matched TCR by patient](figs/TCR_frac_pat.png)
+![UMAP for matched TCRs](figs/UMAP_matched_TCR.png)
 
 We observe that CD8+ cell clones are highly more expanded than CD4+. That illustrates highly active cytotoxic processess in the tissue, as CD8+ cells are the main killing actors. Here, we shall remember that different subsets of CD8+ cells were enriched in tumor and normal tissues and state that they are expanded to different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour.
 
