@@ -1,5 +1,4 @@
 # bi-2023-tcr-tils
-repository with the results on the semester project 
 
 # Re-analysis of the public dataset: comparison and evaluation of T cells in paired tumor and normal lung single cell samples
 
