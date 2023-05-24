@@ -54,7 +54,7 @@ Leiden clustering resulted in 14 separate clusters, that were annotated using co
 * *SLC4A10* for MAIT cells
 
 ![UMAP of clustering results](figs/umap_clustering.png)
-<img src="figs/clustering_markers.png" width="59%" height="59%" >
+<img src="figs/clustering_markers.png" width="70%" height="70%" >
 <!-- ![Cell subtype marker expression](figs/clustering_markers.png) -->
 
 Differentially expressed genes were found using wilcoxon test for each cell type vs all other cells. Compared to the original article, we obtained a bit fewer clusters, namely original publication clusterised CD4+ helpers deeper. Other results are comparable with original publication.
