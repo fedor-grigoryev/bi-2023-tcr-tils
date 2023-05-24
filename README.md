@@ -15,6 +15,8 @@ The notebook with the full analysis can be found in this repo. Here I present an
 
 ![Pipeline of analysis](figs/pipeline.png)
 
+<img src="figs/pipeline.png" width="70%" height="70%" >
+
 The data was obtained from GEO (GSE173351) and contains Cell Ranger (v3.1.0) output - digital gene expression matrix and TCR data for each sample. Quality control, clustering, and annotation single-cell sequencing data were performed using the Scanpy package (v.1.9.1) for Python (v.3.8.11) (Wolf F. A., et al., 2018) and Seurat package (v.4.3.0) for R (v.4.2.3) (Hao Y., et al., 2022). For working with TCR data, Scirpy package (v.0.12.0) for Python (Sturm G., et al. 2020) was used. We querried VDJdb for TCR specificity
 
 
