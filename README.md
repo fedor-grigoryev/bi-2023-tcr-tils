@@ -78,25 +78,22 @@ The single cell sequencing data is combined to TCR seq by cell barcode. The pair
 <!-- ![Fraction of cells with matched TCR by patient](figs/TCR_frac_pat.png) -->
 ![UMAP for matched TCRs](figs/UMAP_matched_TCR.png)
 
-We observe that CD8+ cell clones are highly more expanded than CD4+. That illustrates highly active cytotoxic processess in the tissue, as CD8+ cells are the main killing actors. 
+We observe that CD8+ cell clones are highly more expanded than CD4+. That illustrates highly active cytotoxic processess in the tissue, as CD8+ cells are the main killing actors. TCR diversity was concordant with that finding: alpha diversity of CD8 cell clonotypes was higher in tumor cells.
 
 ![Number of expanded clonotypes](figs/TCR_clon_number.png)
 ![Proportion of expanded clonotypes](figs/TCR_clon_proportion.png)
 
-TCR diversity was concordant with that finding: alpha diversity of CD8 cell clonotypes was higher in tumor cells.
-
-
-Here, we shall also note that different subsets of CD8+ cells were enriched in tumor and normal tissues. That states that they are most likely expanded to different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour. Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was 1.4 fold higher in normal subset (1.53% vs 1.11%).
+Here, we shall also note that different subsets of CD8+ cells were enriched in tumor and normal tissues -- namely, CD8+ eff1, eff2 and mem1 are higher overexpanded in Tumor. That states that different cellular subtypes are most likely expanded to tackle different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour. Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was 1.4 fold higher in normal subset (1.53% vs 1.11%). 
 
 ![CD8+ expansion in tumor and normal tissue](figs/CD8_exp_by_tissue.png)
 
-EXploring the largest subclones, we note that Tumor and Normal samples do not share cellular compositions.
+EXploring the largest subclones, we note that Tumor and Normal samples do not share cellular compositions with Normal composition being highly more variable. As tumor immunity is occupied with its fight with malignant cells, there are less expanded clonotypes with cells being specific to other pathogenic species.
 
 ![Cell type composition across 10 most populated clonotypes in Tumor and Normal](figs/celltype_clonotypes.png)
 
 ## Clonotype networks
 
-Construction of a clonotype network by computing distances between CDR3 sequences reveals a set of public clonotypes - clonotype clusters shared by all of the patients, illustrating possible specificity to a common pathogen (the clonotype network has been defined through amino acid alignment with distance based on BLOSUM62 matrix. Two clonotypes were connected in the network with distance of their  CDR3 lower than 10). The query to VDJdb  (Shugay M., et al. 2018) has shown that TCRs from one of public clonotype networks (`1238`) were indeed specific for antigens from single pathogenic species - CMV. 
+Construction of a clonotype network by computing distances between CDR3 sequences reveals a set of public clonotypes - clonotype clusters shared by all of the patients, illustrating possible specificity to a common pathogen (the clonotype network has been defined through amino acid alignment with distance based on BLOSUM62 matrix. Two clonotypes were connected in the network with distance of their  CDR3 lower than 10). The query to VDJdb  (Shugay M., et al. 2018) has shown that TCRs from one of public clonotype networks (`1238`) were indeed specific for antigens from single pathogenic species - CMV.
 
  ![Clonotype networks](figs/clonotype_net.png)
  
@@ -106,9 +103,6 @@ Query to VDJdb has revealed specificity of some TCRs to epitopes of common patho
 
 ![Map by TCR sequence specificity to corresponding pathogenic species queried from VDJdb](figs/VDJdb_map.png)
 
-
-
-lse
 ## Conclusion 
 In this project I have explored the possibilities of paired RNAseq+TCRseq on a public dataset of matched tumor and normal tissues in resectable non-small cell lung cancer.  
 
@@ -118,7 +112,6 @@ In this project I have explored the possibilities of paired RNAseq+TCRseq on a p
 * Construction of clonotype networks has revealed a specificity to a public epitope. 
 
 It would be of great interest to explore and compare transcriptional programs of tumor associated antigen specific clones in the subsequent works. 
-
 
 
 ## Literature 
