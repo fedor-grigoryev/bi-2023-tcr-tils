@@ -95,7 +95,8 @@ Here, we shall also note that different subsets of CD8+ cells were enriched in t
 
 EXploring the largest subclones, we note that Tumor and Normal samples do not share cellular compositions with Normal composition being highly more variable. As tumor immunity is occupied with its fight with malignant cells, there are less expanded clonotypes with cells being specific to other pathogenic species.
 
-![Cell type composition across 10 most populated clonotypes in Tumor and Normal](figs/celltype_clonotypes.png)
+<!-- ![Cell type composition across 10 most populated clonotypes in Tumor and Normal](figs/celltype_clonotypes.png) -->
+<img src="figs/celltype_clonotypes.png" width="70%" height="70%" >
 
 ## Clonotype networks
 
