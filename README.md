@@ -89,7 +89,7 @@ We observe that CD8+ cell clones are highly more expanded than CD4+. That illust
 <!-- ![Proportion of expanded clonotypes](figs/TCR_clon_proportion.png) -->
 <img src="figs/TCR_clon_proportion.png" width="80%" height="80%" >
 
-Here, we shall also note that different subsets of CD8+ cells were enriched in tumor and normal tissues -- namely, CD8+ eff1, eff2 and mem1 are higher overexpanded in Tumor. That states that different cellular subtypes are most likely expanded to tackle different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour. Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was 1.4 fold higher in normal subset (1.53% vs 1.11%). 
+Here, we shall also note that different subsets of CD8+ cells were enriched in tumor and normal tissues -- namely, CD8+ eff2 (3/4 samples) and mem1 (4/4 samples) are higher overexpanded in Tumor. That states that different cellular subtypes are most likely expanded to tackle different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour. Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was 1.4 fold higher in normal subset (1.53% vs 1.11%). 
 
 <!-- ![CD8+ expansion in tumor and normal tissue](figs/CD8_exp_by_tissue.png) -->
 <img src="figs/CD8_exp_by_tissue.png" width="80%" height="80%" >
@@ -114,10 +114,10 @@ Query to VDJdb has revealed specificity of some TCRs to epitopes of common patho
 ## Conclusion 
 In this project I have explored the possibilities of paired RNAseq+TCRseq on a public dataset of matched tumor and normal tissues in resectable non-small cell lung cancer.  
 
-* The T-cells were clustered and annotated into subgroups.
-* Cell type enrichment was explored for Tumor and Normal samples.
-* Matched TCR sequencing has allowed for researching clonal expansion independently by subtypes. 
-* Construction of clonotype networks has revealed a specificity to a public epitope. 
+* The T-cells were clustered and annotated into subgroups
+* Cell type enrichment was explored for Tumor and Normal samples
+* Matched TCR sequencing has allowed for researching clonal expansion independently by subtypes
+* Construction of clonotype networks has revealed a specificity to a public epitope
 
 It would be of great interest to explore and compare transcriptional programs of tumor associated antigen specific clones in the subsequent works. 
 
