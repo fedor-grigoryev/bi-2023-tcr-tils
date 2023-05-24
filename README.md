@@ -72,23 +72,25 @@ As expected, cellular distribution in tumor and normal sample is highly differen
 
 ## TCR seq integration
 
-The single cell sequencing data is combined to TCR seq by cell barcode. The paired sequencing is done separately on two subsets of cells and that results in some ammount of cellular dropouts -- not all barcoded cells have a matched sequenced TCR. Here we assess the proportion of succesfully matched cells, which was high enough for all of the samples.
+The single cell sequencing data is combined to TCR seq by cell barcode. The paired sequencing is done separately on two subsets of cells and that results in some ammount of cellular dropouts -- not all barcoded cells have a matched sequenced TCR. In our case most of TCRs were succesfully matched and here we assess the proportion of succesfully matched cells, which was high enough for all of the samples.
 
 ![Fraction of cells with matched TCR by sample](figs/TCR_frac_sample.png)
 <!-- ![Fraction of cells with matched TCR by patient](figs/TCR_frac_pat.png) -->
 ![UMAP for matched TCRs](figs/UMAP_matched_TCR.png)
 
-We observe that CD8+ cell clones are highly more expanded than CD4+. That illustrates highly active cytotoxic processess in the tissue, as CD8+ cells are the main killing actors. Here, we shall remember that different subsets of CD8+ cells were enriched in tumor and normal tissues and state that they are expanded to different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour.
+We observe that CD8+ cell clones are highly more expanded than CD4+. That illustrates highly active cytotoxic processess in the tissue, as CD8+ cells are the main killing actors. 
 
-![Fraction of cells with matched TCR by patient](figs/TCR_frac_pat.png)
-![UMAP for matched TCRs](figs/UMAP_matched_TCR.png)
+![Number of expanded clonotypes](figs/TCR_clon_number.png)
+![Proportion of expanded clonotypes](figs/TCR_clon_proportion.png)
 
-Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was 1.4 fold higher in normal subset.
-
-We evaluated the clonal expansion of TILs and TCR diversity: the proportion of expanded CD8 cell clonotypes was higher in tumor cells, while expanded CD4 clonotypes dominate in normal cells. 
+TCR diversity was concordant with that finding: alpha diversity of CD8 cell clonotypes was higher in tumor cells.
 
 
-Tumor and Normal samples do not share clonal compositions.
+Here, we shall also note that different subsets of CD8+ cells were enriched in tumor and normal tissues. That states that they are most likely expanded to different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour. Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was 1.4 fold higher in normal subset (1.53% vs 1.11%).
+
+![CD8+ expansion in tumor and normal tissue](figs/CD8_exp_by_tissue.png)
+
+EXploring the largest subclones, we note that Tumor and Normal samples do not share cellular compositions.
 
 ![Cell type composition across 10 most populated clonotypes in Tumor and Normal](figs/celltype_clonotypes.png)
 
