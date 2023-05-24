@@ -14,7 +14,7 @@ Our project is based on open data from the article [“Transcriptional programs 
 The notebook with the full analysis can be found in this repo. Here I present and summarize the main results of the work. A short recap can also be found in the presentation. 
 
 <!-- ![Pipeline of analysis](figs/pipeline.png) -->
-<img src="figs/pipeline.png" width="60%" height="60%" >
+<img src="figs/pipeline.png" width="70%" height="70%" >
 
 The data was obtained from GEO (GSE173351) and contains Cell Ranger (v3.1.0) output - digital gene expression matrix and TCR data for each sample. Quality control, clustering, and annotation single-cell sequencing data were performed using the Scanpy package (v.1.9.1) for Python (v.3.8.11) (Wolf F. A., et al., 2018) and Seurat package (v.4.3.0) for R (v.4.2.3) (Hao Y., et al., 2022). For working with TCR data, Scirpy package (v.0.12.0) for Python (Sturm G., et al. 2020) was used. We querried VDJdb for TCR specificity
 
@@ -54,7 +54,7 @@ Leiden clustering resulted in 14 separate clusters, that were annotated using co
 * *SLC4A10* for MAIT cells
 
 ![UMAP of clustering results](figs/umap_clustering.png)
-<img src="figs/clustering_markers.png" width="70%" height="70%" >
+<img src="figs/clustering_markers.png" width="60%" height="60%" >
 <!-- ![Cell subtype marker expression](figs/clustering_markers.png) -->
 
 Differentially expressed genes were found using wilcoxon test for each cell type vs all other cells. Compared to the original article, we obtained a bit fewer clusters, namely original publication clusterised CD4+ helpers deeper. Other results are comparable with original publication.
