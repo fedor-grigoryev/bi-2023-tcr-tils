@@ -94,7 +94,7 @@ Here, we shall also note that different subsets of CD8+ cells were enriched in t
 <!-- ![CD8+ expansion in tumor and normal tissue](figs/CD8_exp_by_tissue.png) -->
 <img src="figs/CD8_exp_by_tissue.png" width="80%" height="80%" >
 
-EXploring the largest subclones, we note that Tumor and Normal samples do not share cellular compositions with Normal composition being highly more variable. As tumor immunity is occupied with its fight with malignant cells, there are less expanded clonotypes with cells being specific to other pathogenic species.
+Exploring the largest subclones, we note that Tumor and Normal samples do not share cellular compositions with Normal composition being highly more variable. As tumor immunity is occupied with its fight with malignant cells, there are less expanded clonotypes with cells being specific to other pathogenic species.
 
 <!-- ![Cell type composition across 10 most populated clonotypes in Tumor and Normal](figs/celltype_clonotypes.png) -->
 <img src="figs/celltype_clonotypes.png" width="80%" height="80%" >
