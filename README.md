@@ -64,7 +64,7 @@ Differentially expressed genes were found using wilcoxon test for each cell type
 ![Dotplot of cell markers, differentially expressed genes and T cell checkpoint associated genes](figs/dotplot.png)
 
 
-As expected, cellular distribution in tumor and normal sample is highly different:
+As expected, **cellular distribution in tumor and normal sample is highly different**:
 
 * CD8+ effector2 cells are enriched in Tumor, while  CD8+ effector1 – in Normal tissue
 * Both CD4+ helper subtypes are enriched in Normal, although  CD4+ Follicular helpers and CD4+ T reg are more specific for Tumor
@@ -82,14 +82,14 @@ The single cell sequencing data is combined to TCR seq by cell barcode. The pair
 <!-- ![Fraction of cells with matched TCR by patient](figs/TCR_frac_pat.png) -->
 <img src="figs/UMAP_matched_TCR.png">
 
-We observe that CD8+ cell clones are highly more expanded than CD4+. That illustrates highly active cytotoxic processess in the tissue, as CD8+ cells are the main killing actors. TCR diversity was concordant with that finding: alpha diversity of CD8 cell clonotypes was higher in tumor cells.
+We observe that **CD8+ cell clones are highly more expanded than CD4+**. That illustrates highly active cytotoxic processess in the tissue, as CD8+ cells are the main killing actors. TCR diversity was concordant with that finding: **alpha diversity of CD8 cell clonotypes was higher in tumor cells**.
 
 <!-- ![Number of expanded clonotypes](figs/TCR_clon_number.png) -->
 <img src="figs/TCR_clon_number.png" width="80%" height="80%" >
 <!-- ![Proportion of expanded clonotypes](figs/TCR_clon_proportion.png) -->
 <img src="figs/TCR_clon_proportion.png" width="80%" height="80%" >
 
-Here, we shall also note that different subsets of CD8+ cells were enriched in tumor and normal tissues -- namely, CD8+ proliferating (4/4 samples), eff2 (3/4 samples) and mem1 (4/4 samples) are higher overexpanded in Tumor. That states that different cellular subtypes are most likely expanded to tackle different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour. Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was 1.4 fold higher in normal subset (1.53% vs 1.11%). 
+Here, we shall also note that different subsets of CD8+ cells were enriched in tumor and normal tissues -- namely, CD8+ proliferating (4/4 samples), eff2 (3/4 samples) and mem1 (4/4 samples) are higher overexpanded in Tumor. That states that different cellular subtypes are most likely expanded to tackle different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour. Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was **1.4 fold higher** in normal subset (1.53% vs 1.11%). 
 
 <!-- ![CD8+ expansion in tumor and normal tissue](figs/CD8_exp_by_tissue.png) -->
 <img src="figs/CD8_exp_by_tissue.png" width="80%" height="80%" >
