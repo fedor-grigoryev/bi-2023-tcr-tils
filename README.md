@@ -74,7 +74,7 @@ As expected, **cellular distribution in tumor and normal sample is highly differ
 
 ## TCR seq integration
 
-The single cell sequencing data is combined to TCR seq by cell barcode. The paired sequencing is done separately on two subsets of cells. Obviously it results in some ammount of cellular dropouts -- not all barcoded cells have a matched sequenced TCR. In our case most of TCRs were succesfully matched and here we assess the proportion of succesfully matched cells, which was high enough for all of the samples.
+The single cell sequencing data is combined to TCR seq by cell barcode. The paired sequencing is done separately on two subsets of cells. Obviously it results in some ammount of cellular dropouts - not all barcoded cells have a matched sequenced TCR. In our case most of TCRs were succesfully matched and here we assess the proportion of succesfully matched cells, which was high enough for all of the samples.
 
 <!-- ![Fraction of cells with matched TCR by sample](figs/TCR_frac_sample.png) -->
 <img src="figs/TCR_frac_sample.png" width="80%" height="80%" >
