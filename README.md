@@ -12,13 +12,12 @@ Our project is based on open data from the article [“Transcriptional programs 
 
 ## Methods and Results
 
-The notebook with the full analysis can be found in this repo. Here I present and summarize the main results of the work. A short recap can also be found in the presentation. 
+The notebook with the full analysis can be found in this repo and can be used to reproduce results. Here in the project README I present and summarize the main results of the work. A short recap can also be found in the presentation. 
 
 <!-- ![Pipeline of analysis](figs/pipeline.png) -->
 <img src="figs/pipeline.png" width="70%" height="70%" >
 
-The data was obtained from GEO (GSE173351) and contains Cell Ranger (v3.1.0) output - gene expression matrix and TCR data for each sample. Quality control, clustering, and annotation single-cell sequencing data were performed using the Scanpy package (v.1.9.1) for Python (v.3.8.11) (Wolf F. A., et al., 2018). For working with TCR data, Scirpy package (v.0.12.0) for Python (Sturm G., et al. 2020) was used. We querried VDJdb for TCR specificity
-
+The data was obtained from GEO (GSE173351) and contains Cell Ranger (v3.1.0) output - gene expression matrix and TCR data for each sample. Quality control, clustering, and annotation single-cell sequencing data were performed using the Scanpy package (v.1.9.1) for Python (v.3.8.11) (Wolf F. A., et al., 2018). For working with TCR data, Scirpy package (v.0.12.0) for Python (Sturm G., et al. 2020) was used. We querried VDJdb for TCR CDR3 sequences to reveal specificity known pathogenic targets.
 
 ### QC and filtration
 
@@ -44,7 +43,7 @@ After harmonization, cell clusters are more evenly distributed among patients, h
 
 ![UMAP of expression data after batch correction](figs/umap_after_harmony.png)
 
-Leiden clustering resulted in 14 separate clusters, that were annotated using combination of general CD4/CD8 markers with common subset specific markers:
+Leiden clustering resulted in **14 separate clusters**, that were annotated using combination of general CD4/CD8 markers with common subset specific markers:
 
 * *FOXP3* for Tregs; 
 * *MKI67* for proliferating cells;  
@@ -89,19 +88,19 @@ We observe that **CD8+ cell clones are highly more expanded than CD4+**. That il
 <!-- ![Proportion of expanded clonotypes](figs/TCR_clon_proportion.png) -->
 <img src="figs/TCR_clon_proportion.png" width="80%" height="80%" >
 
-Here, we shall also note that different subsets of CD8+ cells were enriched in tumor and normal tissues -- namely, CD8+ proliferating (4/4 samples), eff2 (3/4 samples) and mem1 (4/4 samples) are higher overexpanded in Tumor. That states that different cellular subtypes are most likely expanded to tackle different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour. Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was **1.4 fold higher** in normal subset (1.53% vs 1.11%). 
+Here, we shall also note that **different subsets of CD8+ cells were enriched in tumor and normal tissues** -- namely, CD8+ proliferating (4/4 samples), eff2 (3/4 samples) and mem1 (4/4 samples) are higher overexpanded in Tumor. That states that different cellular subtypes are most likely expanded to tackle different pathogenic sources. Whereas influenza-specific cells should be the most abundant in normal lung, MANA-specific CD8 cells should be more numerous in the tumour. Indeed, query to VDJdb showed that proportion of CD8+ TCRs specific to common lung pathogens (*InfluenzaA*, *SARS-CoV-2*, *M.tuberculosis*) was **1.4 fold higher** in normal subset (1.53% vs 1.11%). 
 
 <!-- ![CD8+ expansion in tumor and normal tissue](figs/CD8_exp_by_tissue.png) -->
 <img src="figs/CD8_exp_by_tissue.png" width="80%" height="80%" >
 
-Exploring the largest subclones, we note that Tumor and Normal samples do not share cellular compositions with Normal composition being highly more variable. As tumor immunity is occupied with its fight with malignant cells, there are less expanded clonotypes with cells being specific to other pathogenic species.
+Exploring the largest subclones, we note that **Tumor and Normal samples do not share cellular compositions** with Normal composition being highly more variable. As tumor immunity is occupied with its fight with malignant cells, there are less expanded clonotypes with cells being specific to other pathogenic species.
 
 <!-- ![Cell type composition across 10 most populated clonotypes in Tumor and Normal](figs/celltype_clonotypes.png) -->
 <img src="figs/celltype_clonotypes.png" width="80%" height="80%" >
 
 ## Clonotype networks
 
-Construction of a clonotype network by computing distances between CDR3 sequences reveals a set of public clonotypes - clonotype clusters shared by all of the patients, illustrating possible specificity to a common pathogen (the clonotype network has been defined through amino acid alignment with distance based on BLOSUM62 matrix. Two clonotypes were connected in the network with distance of their  CDR3 lower than 10). The query to VDJdb  (Shugay M., et al. 2018) has shown that TCRs from one of public clonotype networks (`1238`) were indeed specific for antigens from single pathogenic species - CMV.
+Construction of a clonotype network by computing distances between CDR3 sequences reveals **a set of public clonotypes** - clonotype clusters shared by all of the patients, illustrating possible specificity to a common pathogen (the clonotype network has been defined through amino acid alignment with distance based on BLOSUM62 matrix. Two clonotypes were connected in the network with distance of their  CDR3 lower than 10). The query to VDJdb  (Shugay M., et al. 2018) has shown that TCRs from one of the public clonotype networks (`1238`) were indeed specific for antigens from single pathogenic species - CMV.
 
  ![Clonotype networks](figs/clonotype_net.png)
  
