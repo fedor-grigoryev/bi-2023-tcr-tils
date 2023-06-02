@@ -1,6 +1,6 @@
 # bi-2023-tcr-tils
 
-# Re-analysis of the public dataset: comparison and evaluation of T cells in paired tumor and normal lung single cell samples
+# Re-analysis of the public immunological dataset: comparison and evaluation of T cells in paired tumor and normal lung single cell samples
 
 ---
 ## Motivation
