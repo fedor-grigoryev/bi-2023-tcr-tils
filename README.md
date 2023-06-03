@@ -19,6 +19,8 @@ The notebook with the full analysis can be found in this repo and can be used to
 
 The data was obtained from GEO (GSE173351) and contains Cell Ranger (v3.1.0) output - gene expression matrix and TCR data for each sample. Quality control, clustering, and annotation single-cell sequencing data were performed using the Scanpy package (v.1.9.1) for Python (v.3.8.11) (Wolf F. A., et al., 2018). For working with TCR data, Scirpy package (v.0.12.0) for Python (Sturm G., et al. 2020) was used. We querried VDJdb for TCR CDR3 sequences to reveal specificity known pathogenic targets.
 
+All requirements needed for result reproduction can be found in `requirements.txt` and installed with `pip`
+
 ### QC and filtration
 
 Low-quality cells were filtered out if:
