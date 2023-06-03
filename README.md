@@ -43,7 +43,7 @@ After harmonization, cell clusters are more evenly distributed among patients, h
 
 ![UMAP of expression data after batch correction](figs/umap_after_harmony.png)
 
-Leiden clustering resulted in **14 separate clusters**, that were annotated using combination of general CD4/CD8 markers with common subset specific markers:
+Leiden clustering resulted in **12 separate clusters**, that were annotated using combination of general CD4/CD8 markers with common subset specific markers:
 
 * *FOXP3* for Tregs; 
 * *MKI67* for proliferating cells;  
